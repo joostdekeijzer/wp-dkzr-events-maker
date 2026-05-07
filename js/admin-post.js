@@ -58,39 +58,39 @@
 			$( '#event-options-list' ).slideUp( 'fast' );
 			$( '#event-options .edit-event-options' ).show();
 
-			var label = ', ' + $.trim( $( '#event-options-shortlist strong' ).text() );
+			var label = ', ' + $( '#event-options-shortlist strong' ).text().trim();
 			var options = $( "label[for*='event_display_option']" );
 
 			$( options ).each( function ( index, value ) {
 				if ( $( this ).find( 'input' ).is( ':checked' ) ) {
-					if ( label.indexOf( $.trim( $( this ).text() ) ) < 2 ) {
+					if ( label.indexOf( $( this ).text().trim() ) < 2 ) {
 						if ( label.length > 2 ) {
-							label = label + ', ' + $.trim( $( this ).text() );
+							label = label + ', ' + $( this ).text().trim();
 						} else {
-							label = label + $.trim( $( this ).text() );
+							label = label + $( this ).text().trim();
 						}
 					}
 				} else {
-					if ( label.indexOf( $.trim( $( this ).text() ) ) >= 2 ) {
-						label = label.replace( ', ' + $.trim( $( this ).text() ), '' );
+					if ( label.indexOf( $( this ).text().trim() ) >= 2 ) {
+						label = label.replace( ', ' + $( this ).text().trim(), '' );
 					}
 				}
 			} );
 
 			if ( $( 'input[name=event_featured]' ).is( ':checked' ) ) {
 				// if string does not exist, add it
-				if ( label.indexOf( $.trim( $( 'label[for=event_featured]' ).text() ) ) < 2 ) {
+				if ( label.indexOf( $( 'label[for=event_featured]' ).text().trim() ) < 2 ) {
 					if ( label.length > 2 ) {
-						label = label + ', ' + $.trim( $( 'label[for=event_featured]' ).text() );
+						label = label + ', ' + $( 'label[for=event_featured]' ).text().trim();
 					} else {
-						label = label + $.trim( $( 'label[for=event_featured]' ).text() );
+						label = label + $( 'label[for=event_featured]' ).text().trim();
 					}
 				}
 				$( 'input[name=event_featured]' ).attr( 'checked', 'checked' );
 			} else {
 				// if string exists, remove it
-				if ( label.indexOf( $.trim( $( 'label[for=event_featured]' ).text() ) ) >= 2 ) {
-					label = label.replace( ', ' + $.trim( $( 'label[for=event_featured]' ).text() ), '' );
+				if ( label.indexOf( $( 'label[for=event_featured]' ).text().trim() ) >= 2 ) {
+					label = label.replace( ', ' + $( 'label[for=event_featured]' ).text().trim(), '' );
 				}
 			}
 
@@ -105,7 +105,7 @@
 			$( '#event-options-list' ).slideUp( 'fast' );
 			$( '#event-options .edit-event-options' ).show();
 
-			var label = $.trim( $( '#event-options-shortlist strong' ).text() );
+			var label = $( '#event-options-shortlist strong' ).text().trim();
 			if ( label.length > 0 ) {
 				label = ', ' + label;
 			}
@@ -115,14 +115,14 @@
 			$.each( current_options, function ( index, value ) {
 				if ( value == true ) {
 					// if string does not exist, add it
-					if ( label.indexOf( $.trim( $( 'label[for=event_display_option_' + index + ']' ).text() ) ) < 2 ) {
-						label = label + ', ' + $.trim( $( 'label[for=event_display_option_' + index + ']' ).text() );
+					if ( label.indexOf( $( 'label[for=event_display_option_' + index + ']' ).text().trim() ) < 2 ) {
+						label = label + ', ' + $( 'label[for=event_display_option_' + index + ']' ).text().trim();
 					}
 					$( 'input#event_display_option_' + index ).attr( 'checked', 'checked' );
 				} else {
 					// if string exists, remove it
-					if ( label.indexOf( $.trim( $( 'label[for=event_display_option_' + index + ']' ).text() ) ) >= 2 ) {
-						label = label.replace( ', ' + $.trim( $( 'label[for=event_display_option_' + index + ']' ).text() ), '' );
+					if ( label.indexOf( $( 'label[for=event_display_option_' + index + ']' ).text().trim() ) >= 2 ) {
+						label = label.replace( ', ' + $( 'label[for=event_display_option_' + index + ']' ).text().trim(), '' );
 					}
 					$( 'input#event_display_option_' + index ).removeAttr( 'checked' );
 				}
@@ -130,14 +130,14 @@
 
 			if ( current_featured == '1' ) {
 				// if string does not exist, add it
-				if ( label.indexOf( $.trim( $( 'label[for=event_featured]' ).text() ) ) < 2 ) {
-					label = label + ', ' + $.trim( $( 'label[for=event_featured]' ).text() );
+				if ( label.indexOf( $( 'label[for=event_featured]' ).text().trim() ) < 2 ) {
+					label = label + ', ' + $( 'label[for=event_featured]' ).text().trim();
 				}
 				$( 'input[name=event_featured]' ).attr( 'checked', 'checked' );
 			} else {
 				// if string exists, remove it
-				if ( label.indexOf( $.trim( $( 'label[for=event_featured]' ).text() ) ) >= 2 ) {
-					label = label.replace( ', ' + $.trim( $( 'label[for=event_featured]' ).text() ), '' );
+				if ( label.indexOf( $( 'label[for=event_featured]' ).text().trim() ) >= 2 ) {
+					label = label.replace( ', ' + $( 'label[for=event_featured]' ).text().trim(), '' );
 				}
 				$( 'input[name=event_featured]' ).removeAttr( 'checked' );
 			}
@@ -343,7 +343,7 @@
 			} );
 
 			if ( checkedDays.length === 0 ) {
-				var start = $.trim( $( '#event_start_date' ).val() );
+				var start = $( '#event_start_date' ).val().trim();
 
 				if ( start === '' ) {
 					startDay = 1;
