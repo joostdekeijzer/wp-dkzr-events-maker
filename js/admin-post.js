@@ -46,7 +46,7 @@
 
 
 		// event options
-		$( '#event-options .edit-event-options' ).click( function () {
+		$( '#event-options .edit-event-options' ).on('click', function () {
 			if ( $( '#event-options-list' ).is( ":hidden" ) ) {
 				$( '#event-options-list' ).slideDown( 'fast' );
 				$( this ).hide();
@@ -54,7 +54,7 @@
 			return false;
 		} );
 
-		$( '#event-options .save-event-options' ).click( function () {
+		$( '#event-options .save-event-options' ).on('click', function () {
 			$( '#event-options-list' ).slideUp( 'fast' );
 			$( '#event-options .edit-event-options' ).show();
 
@@ -101,7 +101,7 @@
 			return false;
 		} );
 
-		$( '#event-options .cancel-event-options' ).click( function () {
+		$( '#event-options .cancel-event-options' ).on('click', function () {
 			$( '#event-options-list' ).slideUp( 'fast' );
 			$( '#event-options .edit-event-options' ).show();
 

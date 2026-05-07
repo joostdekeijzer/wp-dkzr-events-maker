@@ -1015,11 +1015,11 @@ ex13.datetimepicker({
 	showTimezone: true
 });
 
-$('#utility_example_1_setdt').click(function(){
+$('#utility_example_1_setdt').on('click', function(){
 	ex13.datetimepicker('setDate', (new Date()) );
 });
 
-$('#utility_example_1_getdt').click(function(){
+$('#utility_example_1_getdt').on('click', function(){
 	alert(ex13.datetimepicker('getDate'));
 });
 </pre>

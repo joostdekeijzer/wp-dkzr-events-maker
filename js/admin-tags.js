@@ -120,7 +120,7 @@
 			emTurnOffRemoveButton();
 		} );
 
-		$( '#submit' ).click( function () {
+		$( '#submit' ).on('click', function () {
 			var emSubmit = $( this ).closest( 'form' );
 
 			emSubmit.ajaxSuccess( function () {
