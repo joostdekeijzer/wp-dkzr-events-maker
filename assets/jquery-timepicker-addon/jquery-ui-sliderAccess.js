@@ -1,10 +1,10 @@
 /*
  * jQuery UI Slider Access
- * By: Trent Richardson [http://trentrichardson.com]
- * Version 0.3
- * Last Modified: 10/20/2012
+ * Version 1.0
+ * Last Modified: 2026-05-07
  * 
  * Copyright 2011 Trent Richardson
+ * Copyright 2026 Joost de Keijzer
  * Dual licensed under the MIT and GPL licenses.
  * http://trentrichardson.com/Impromptu/GPL-LICENSE.txt
  * http://trentrichardson.com/Impromptu/MIT-LICENSE.txt

@@ -1,6 +1,6 @@
-/*! jQuery Timepicker Addon - v1.6.3 - 2016-04-20
-* http://trentrichardson.com/examples/timepicker
-* Copyright (c) 2016 Trent Richardson; Licensed MIT */
+/*! jQuery Timepicker Addon - v2.0.0 - 2026-05-07
+* Copyright (c) 2016 Trent Richardson
+* Copyright (c) 2026 Joost de Keijzer; Licensed MIT */
 (function (factory) {
 	if (typeof define === 'function' && define.amd) {
 		define(['jquery', 'jquery-ui'], factory);
